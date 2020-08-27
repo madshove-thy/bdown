@@ -1,5 +1,5 @@
 ---
-title: "Politologisk projektdesign page"
+title: "Politologisk projektdesign"
 output: html_document
 ---
 
@@ -7,9 +7,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Politologisk Projektdesign efteraar 2020
+## Politologisk Projektdesign efterår 2020
 Herunder findes ugentlige produkter i faget sendt til fagkoordinator Hanne Nexø Jensen.
 
 Download [forventningsskema](Forventningsskema.pdf).
 
 Download [motivationsskriv](Motivation.pdf)
+
+Download [projektplan i excel format](projektplan.xlsx). Der er to faner, én med tidsplan før speciale-start og én med tidsplan fra 1. februar og frem.
+
+Download [projektdesign i powerpoint format](projektdesign.pptx).
