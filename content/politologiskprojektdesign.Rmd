@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Herunder findes ugentlige produkter i faget sendt til fagkoordinator Hanne Nexø Jensen.
 
 #### Forventningsskema
-Gå til [forventningsskema](politologiskprojektdesign/Forventningsskema.pdf).
+Gå til [forventningsskema](Forventningsskema.pdf).
 
 ## R Markdown
 
