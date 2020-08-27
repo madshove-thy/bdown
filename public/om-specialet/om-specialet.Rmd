@@ -1,0 +1,13 @@
+---
+title: "Om-specialet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Om specialet
+Specialet omhandler repræsentations stil blandt politikere i form af politiske annoncer. Vi udnytter Facebook Ad Library til at undersøge forskellige stile blandt politikere. Herudover vil vi konstruere et survey, hvor vi har mulighed for at teste de forskellige repræsentations stile, og hvilke der er mest effektive ift. politikerens vælgere.
+
+Specialet vil blive udført i foråret 2021 og kommer til at fylde 140 sider. Forfatterne for specialet bliver Frederik Hedegaard, Emil Fuhr og Mads Hove.
