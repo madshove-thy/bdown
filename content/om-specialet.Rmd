@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Emne- og problemfelt
-_“What is the ultimate value in any war of a soldier versus af bomber? [...] If you have a dollar to spend, do you spend it on an ad or do you spend it on a phone call? And if you only have money to spend on ads, do you give one person fifty ads or two people twenty-five? Nobody knows”_
+*“What is the ultimate value in any war of a soldier versus af bomber? [...] If you have a dollar to spend, do you spend it on an ad or do you spend it on a phone call? And if you only have money to spend on ads, do you give one person fifty ads or two people twenty-five? Nobody knows”*
 
 Hvad kan forklare individuelle forskelle i politikeres repræsentationsstil når det kommer til politiske annoncer? Hvem lykkes, og hvem gør ikke? Disse spørgsmål er grundlaget for vores speciale, hvor vi vil udnytte at have adgang til danske politikeres annonce-data på Facebook fra folketingsvalget 2019 til at se på individuelle forskelle i repræsentations stil. Denne information vil vi bruge til at konstruere et survey-eksperiment med forskellige repræsentationsstile som stimulus. Teoretisk læner vi os meget op af litteratur af Justin Grimmer, der omhandler begrebet _home style_. Metodisk ønsker at bruge maskinlæring til at kategorisere annoncerne for derefter at bruge Latent Direchlet Allocation (LDA) modellering til at identificere forskellige repræsentationsstile og de enkelte politikeres placering.
 
