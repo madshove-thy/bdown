@@ -1,5 +1,7 @@
 ---
 title: "Om specialet"
+author: "Mads Hove"
+date: 2020-08-27
 output: html_document
 ---
 
@@ -7,12 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Specialet
-Specialet omhandler repræsentations stil blandt politikere i form af politiske annoncer. Vi udnytter Facebook Ad Library til at undersøge forskellige stile blandt politikere. Herudover vil vi konstruere et survey, hvor vi har mulighed for at teste de forskellige repræsentations stile, og hvilke der er mest effektive ift. politikerens vælgere.
+## Emne- og problemfelt
+_“What is the ultimate value in any war of a soldier versus af bomber? [...] If you have a dollar to spend, do you spend it on an ad or do you spend it on a phone call? And if you only have money to spend on ads, do you give one person fifty ads or two people twenty-five? Nobody knows”_
 
-Specialet vil blive udført i foråret 2021 og kommer til at fylde 140 sider. Forfatterne for specialet bliver Frederik Hedegaard, Emil Fuhr og Mads Hove.
+Hvad kan forklare individuelle forskelle i politikeres repræsentationsstil når det kommer til politiske annoncer? Hvem lykkes, og hvem gør ikke? Disse spørgsmål er grundlaget for vores speciale, hvor vi vil udnytte at have adgang til danske politikeres annonce-data på Facebook fra folketingsvalget 2019 til at se på individuelle forskelle i repræsentations stil. Denne information vil vi bruge til at konstruere et survey-eksperiment med forskellige repræsentationsstile som stimulus. Teoretisk læner vi os meget op af litteratur af Justin Grimmer, der omhandler begrebet _home style_. Metodisk ønsker at bruge maskinlæring til at kategorisere annoncerne for derefter at bruge Latent Direchlet Allocation (LDA) modellering til at identificere forskellige repræsentationsstile og de enkelte politikeres placering.
 
-I efteråret 2020 forbereder vi specialet og Mads tager kurset Politologisk Projektdesign.
+Specialet vil blive udført i foråret 2021 og kommer til at fylde 140 sider.
 
 ## Om forfatterne
 Forfatterne er Emil Fuhr, Frederik Hedegaard og [Mads Hove](CV2020.pdf). Download CV ved at klikke på navnet.
