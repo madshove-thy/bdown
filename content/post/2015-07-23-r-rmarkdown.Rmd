@@ -1,14 +1,55 @@
 ---
-title: "Denne speciale blog"
+title: "Diplomati på Twitter"
 author: "Mads Hove"
-date: 2020-08-27T21:13:14-05:00
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+date: '2020-10-10T21:13:14-05:00'
+output:
+  html_document:
+    df_print: paged
+tags:
+- R Markdown
+- plot
+- regression
+categories: R
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error = TRUE)
 ```
 
-## Yes yes
-Som hygge aftensprojekt øver jeg mig på at lave en blog vi kan bruge under specialet til at dele informationer på. Og så er det også bare ret sjovt.
+## At føre diplomati på Twitter
+Virksomheder, politisk indhold, interesseorganisationer mv. har længe brugt sociale medier som platform til at promovere og sælge produkter og idéer. Siden er offentlige myndigheder også i stor stil kommet på sociale medier og der lægges mange kræfter og ressourcer i at skabe __content__ der opnår stor synlighed og interaktion. Jeg har hentet de seneste 3.000 tweets ned fra 15 (mere eller mindre tilfældigt) udvalgte landes FN missioner, for at se, hvordan de adskiller sig på forskellige parametre.
+
+## Hvor aktive er de forskellige lande på Twitter?
+Jeg har neden for visualiseret, hvor mange tweets (ekskl. retweets) de 15 lande har lavet i september 2020. Her kan man se, hvordan Rusland suverænt har lavet flest tweets med ca. 1.200 tweets i september 2020. Danmark ligger midt i feltet sammen med Holland, Sverige og Tyrkiet på de omkring 150 tweets.
+
+```{r}
+library(tidyverse)
+library(quanteda)
+library(ggplot2)
+library(gghighlight)
+
+Timeline <- readRDS("/Users/Madshove/Dropbox/website-blogdown/bdown/data/Timeline_UN_sep20.rds")
+
+Timeline$date <- as.Date(Timeline$created_at)
+
+Timeline$date <- str_remove_all(Timeline$date, "[:punct:]") # remove the "-" between the date-elements
+
+Timeline$date <- as.numeric(Timeline$date)
+
+Dsep <- subset(Timeline, date >= "20200901")
+
+Dsep %>%
+  group_by(screen_name) %>%
+  select(screen_name) %>%
+  summarize(n = n()) %>%
+  ungroup() %>%
+  ggplot(aes(reorder(x = screen_name, n), y = n)) +
+  geom_bar(stat = "Identity") +
+  gghighlight(screen_name == "Denmark_UN") +
+  ggtitle("Amount of tweets made by 15 different UN Mission in September 2020") +
+  xlab("UN Mission") + 
+  ylab("Count of tweets") + 
+  theme_minimal() +
+  coord_flip()
+
+```
