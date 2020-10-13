@@ -23,33 +23,6 @@ Virksomheder, politisk indhold, interesseorganisationer mv. har længe brugt soc
 Jeg har neden for visualiseret, hvor mange tweets (ekskl. retweets) de 15 lande har lavet i september 2020. Her kan man se, hvordan Rusland suverænt har lavet flest tweets med ca. 1.200 tweets i september 2020. Danmark ligger midt i feltet sammen med Holland, Sverige og Tyrkiet på de omkring 150 tweets.
 
 ```{r}
-library(tidyverse)
-library(quanteda)
-library(ggplot2)
-library(gghighlight)
 
-Timeline <- readRDS("/Users/Madshove/Dropbox/website-blogdown/bdown/data/Timeline_UN_sep20.rds")
-
-Timeline$date <- as.Date(Timeline$created_at)
-
-Timeline$date <- str_remove_all(Timeline$date, "[:punct:]") # remove the "-" between the date-elements
-
-Timeline$date <- as.numeric(Timeline$date)
-
-Dsep <- subset(Timeline, date >= "20200901")
-
-Dsep %>%
-  group_by(screen_name) %>%
-  select(screen_name) %>%
-  summarize(n = n()) %>%
-  ungroup() %>%
-  ggplot(aes(reorder(x = screen_name, n), y = n)) +
-  geom_bar(stat = "Identity") +
-  gghighlight(screen_name == "Denmark_UN") +
-  ggtitle("Amount of tweets made by 15 different UN Mission in September 2020") +
-  xlab("UN Mission") + 
-  ylab("Count of tweets") + 
-  theme_minimal() +
-  coord_flip()
 
 ```
