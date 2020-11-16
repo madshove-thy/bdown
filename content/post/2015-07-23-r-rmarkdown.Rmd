@@ -21,8 +21,3 @@ Virksomheder, politisk indhold, interesseorganisationer mv. har længe brugt soc
 
 ## Hvor aktive er de forskellige lande på Twitter?
 Jeg har neden for visualiseret, hvor mange tweets (ekskl. retweets) de 15 lande har lavet i september 2020. Her kan man se, hvordan Rusland suverænt har lavet flest tweets med ca. 1.200 tweets i september 2020. Danmark ligger midt i feltet sammen med Holland, Sverige og Tyrkiet på de omkring 150 tweets.
-
-```{r}
-
-
-```
